@@ -1,13 +1,13 @@
 // Assignment code here
 
-// make id=generate button call function to generate password 
-// create prompt for password length 8-128 
+// make id=generate button call function to generate password prompt X
+// add textbox to prompt
 // create prompt to ask user if include upper/lower/num/special characters 
 // when user has selected all criteria, a password is generated 
 // generated password is visible on page
 
 function promptLength(){
-  alert("How many characters in your password?");
+  prompt("How many characters do you want to use in your password? Please enter a number between 8-128");
 }
 var btn = document.getElementById("generate");
 btn.addEventListener('click', Event => {
