@@ -2,7 +2,7 @@
 
 // make id=generate button call function to generate password prompt X
 // create prompts to ask user if include upper/lower/num/special characters X
-// save prompt returns into variables
+// save prompt returns into variables X
 // build function to generate password based on user inputs
 // generated password is visible on page
 var characterCount = 0;
@@ -10,7 +10,8 @@ var includeLower = '';
 var includeUpper = '';
 var includeNumber = '';
 var includeSpecial = '';
-
+var passwordCharacters = '';
+var password = '';
 
 function passwordLength(){
   characterCount = prompt("How many characters do you want to use in your password? Please enter a number between 8-128", 12);
@@ -56,6 +57,13 @@ function specialCharacter(){
   }
 }
 
+function generatePassword(){
+  passwordCharacters = includeLower + includeNumber + includeUpper + includeSpecial;
+  for (var i = 0; i <= passwordLength; i++){
+    var randomNumber = Math.floor(Math.random() * passwordLength.length);
+    password += passwordLength.substring(randomNumber, randomNumber +1);
+  }
+}
 // Get references to the #generate element
 // var generateBtn = document.querySelector("#generate");
 
@@ -77,4 +85,6 @@ btn.addEventListener('click', Event => {
   upperCaseCharacter();
   numberCharacter();
   specialCharacter();
+  generatePassword();
+  writePassword();
 });
