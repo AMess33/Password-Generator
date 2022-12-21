@@ -3,27 +3,57 @@
 // make id=generate button call function to generate password prompt X
 // create prompts to ask user if include upper/lower/num/special characters X
 // save prompt returns into variables
-// when user has selected all criteria, a password is generated 
+// build function to generate password based on user inputs
 // generated password is visible on page
+var characterCount = 0;
+var includeLower = '';
+var includeUpper = '';
+var includeNumber = '';
+var includeSpecial = '';
+
 
 function passwordLength(){
-  prompt("How many characters do you want to use in your password? Please enter a number between 8-128", 12);
+  characterCount = prompt("How many characters do you want to use in your password? Please enter a number between 8-128", 12);
 }
 
 function lowerCaseCharacter(){
-  prompt("Do you want to include lower case letters in your password? Type 'yes' or 'no'", 'yes')
+  includeLower = prompt("Do you want to include lower case letters in your password? Type 'yes' or 'no'", 'yes')
+  if(includeLower == 'yes'){
+    includeLower = 'abcdefghijklmnopqrstuvwxyz';
+  }
+  else {
+    includeLower = '';
+  }
 }
 
 function upperCaseCharacter(){
-  prompt("Do you want to include Upper case letters in your password? Type 'yes' or 'no'", 'yes')
+  includeUpper = prompt("Do you want to include Upper case letters in your password? Type 'yes' or 'no'", 'yes')
+  if(includeUpper == 'yes'){
+    includeUpper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  }
+  else {
+    includeUpper = '';
+  }
 }
 
 function numberCharacter(){
-  prompt("Do you want to include numbers in your password? Type 'yes' or 'no'", 'yes')
+  includeNumber = prompt("Do you want to include numbers in your password? Type 'yes' or 'no'", 'yes')
+  if(includeNumber == 'yes'){
+    includeNumber = '0123456789';
+  }
+  else {
+    includeNumber = '';
+  }
 }
 
 function specialCharacter(){
-  prompt("Do you want to include spcecial characters in your password? Type 'yes' or 'no'", 'yes')
+  includeSpecial = prompt("Do you want to include spcecial characters in your password? Type 'yes' or 'no'", 'yes')
+  if(includeSpecial == 'yes'){
+    includeSpecial = "!@#$%^&*()";
+  }
+  else {
+    includeSpecial = '';
+  }
 }
 
 // Get references to the #generate element
