@@ -1,17 +1,38 @@
 // Assignment code here
 
 // make id=generate button call function to generate password prompt X
-// add textbox to prompt
-// create prompt to ask user if include upper/lower/num/special characters 
+// create prompts to ask user if include upper/lower/num/special characters X
+// save prompt returns into variables
 // when user has selected all criteria, a password is generated 
 // generated password is visible on page
 
-function promptLength(){
+function passwordLength(){
   prompt("How many characters do you want to use in your password? Please enter a number between 8-128");
 }
+
+function lowerCaseCharacter(){
+  prompt("Do you want to include lower case letters in your password? Type 'yes' or 'no'")
+}
+
+function upperCaseCharacter(){
+  prompt("Do you want to include Upper case letters in your password? Type 'yes' or 'no'")
+}
+
+function numberCharacter(){
+  prompt("Do you want to include numbers in your password? Type 'yes' or 'no'")
+}
+
+function specialCharacter(){
+  prompt("Do you want to include spcecial characters in your password? Type 'yes' or 'no'")
+}
+
 var btn = document.getElementById("generate");
 btn.addEventListener('click', Event => {
-  promptLength();
+  passwordLength();
+  lowerCaseCharacter();
+  upperCaseCharacter();
+  numberCharacter();
+  specialCharacter();
 });
 
 // Get references to the #generate element
