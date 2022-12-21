@@ -6,6 +6,14 @@
 // when user has selected all criteria, a password is generated 
 // generated password is visible on page
 
+function promptLength(){
+  alert("How many characters in your password?");
+}
+var btn = document.getElementById("generate");
+btn.addEventListener('click', Event => {
+  promptLength();
+});
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
