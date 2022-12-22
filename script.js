@@ -59,11 +59,12 @@ function specialCharacter(){
 
 function generatePassword(){
   passwordCharacters = includeLower + includeNumber + includeUpper + includeSpecial;
-  for (var i=0; i <= characterCount; i++){
-    var randomNumber = Math.floor(Math.random() * characterCount.length);
-    password += passwordCharacters.substring(randomNumber, randomNumber +1);
+  for ( var i = 0; i < characterCount; i++){
+    password += passwordCharacters.charAt(Math.floor(Math.random() * characterCount));
   }
-}
+  return password;
+  }
+
 // Get references to the #generate element
 // var generateBtn = document.querySelector("#generate");
 
