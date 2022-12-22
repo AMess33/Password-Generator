@@ -2,7 +2,7 @@
 
 // make id=generate button call function to generate password prompt X
 // create prompts to ask user if include upper/lower/num/special characters X
-// save prompt returns into variables X
+// save prompt returns into variable X
 // build function to generate password based on user inputs
 // generated password is visible on page
 var characterCount = 0;
@@ -59,9 +59,9 @@ function specialCharacter(){
 
 function generatePassword(){
   passwordCharacters = includeLower + includeNumber + includeUpper + includeSpecial;
-  for (var i = 0; i <= passwordLength; i++){
-    var randomNumber = Math.floor(Math.random() * passwordLength.length);
-    password += passwordLength.substring(randomNumber, randomNumber +1);
+  for (var i=0; i <= characterCount; i++){
+    var randomNumber = Math.floor(Math.random() * characterCount.length);
+    password += passwordCharacters.substring(randomNumber, randomNumber +1);
   }
 }
 // Get references to the #generate element
