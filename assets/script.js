@@ -59,7 +59,7 @@ function specialCharacter(){
 
 function generatePassword(){
   passwordCharacters = includeLower + includeNumber + includeUpper + includeSpecial;
-  for ( var i = 0; i <= characterCount; i++){
+  for ( var i = 0; i < characterCount; i++){
     password += passwordCharacters.charAt(Math.floor(Math.random() * passwordCharacters.length));
   }
   return password;
