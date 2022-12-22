@@ -3,6 +3,12 @@
 *::after {
   box-sizing: border-box;
 }
+:root {
+  --background-white: #e7e9eb;
+  --background-off-white: hsl(0, 0%, 100%);
+  --text-color-gray: hsl(206, 17%, 28%);
+  --light-gray: #c0c7cf;
+}
 
 html,
 body,
@@ -27,15 +33,15 @@ header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+  color: var(--text-color-gray);
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--background-off-white);
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-  color: hsl(206, 17%, 28%);
+  color: var(--text-color-gray);
   font-size: 18px;
   margin: 0 auto;
   max-width: 800px;
@@ -46,7 +52,7 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: var(--background-white);
   height: 2px;
 }
 
@@ -62,7 +68,7 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: var(--background-white);
   height: 2px;
 }
 
@@ -78,7 +84,7 @@ header {
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
-  color: hsl(0, 0%, 100%);
+  color: var(--background-off-white);
   display: inline-block;
   font-size: 22px;
   line-height: 22px;
@@ -90,7 +96,7 @@ header {
 
 button[disabled] {
   cursor: default;
-  background: #c0c7cf;
+  background: var(--light-gray);
 }
 
 .float-right {
@@ -112,7 +118,7 @@ button[disabled] {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
-  border: 2px dashed #c0c7cf;
+  border: 2px dashed var(--light-gray);
   border-radius: 6px;
   resize: none;
   overflow: hidden;
